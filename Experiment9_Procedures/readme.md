@@ -81,6 +81,7 @@ EXEC find_square(6);
 **Expected Output:**  
 Square of 6 is 36
 
+<img width="941" height="372" alt="Screenshot 2026-08-25 103746" src="https://github.com/user-attachments/assets/3449c2c2-407e-4c28-b47f-e9061f34b1d9" />
 
 ---
 
@@ -200,7 +201,9 @@ END;
 
 **Expected Output:**  
 Reversed number of 1234 is 4321
-![Uploading image.png…]()
+
+<img width="928" height="345" alt="Screenshot 2026-08-25 104850" src="https://github.com/user-attachments/assets/5fe56005-0e22-4e73-aeed-6fc070d4fada" />
+
 
 ---
 
