@@ -60,6 +60,7 @@ Key Differences:
 - Use `DBMS_OUTPUT.PUT_LINE` to display the result.
 - Call the procedure with a number as input.
 
+
 **Query**
 ```
 CREATE OR REPLACE PROCEDURE find_square(n NUMBER)
@@ -91,6 +92,8 @@ Square of 6 is 36
 - Use a loop to calculate the factorial.
 - Return the result using the `RETURN` statement.
 - Call the function using a `SELECT` statement or in an anonymous block.
+
+  
 **Query**
 ```
 CREATE OR REPLACE FUNCTION get_factorial(n NUMBER)
@@ -108,6 +111,7 @@ BEGIN
 END;
 /
 ```
+
 **Execute**
 ```
 BEGIN
@@ -115,6 +119,7 @@ BEGIN
 END;
 /
 ```
+
 **Expected Output:**  
 Factorial of 5 is 120
 <img width="927" height="345" alt="image" src="https://github.com/user-attachments/assets/a62e69ff-5ede-408b-9e51-28e110bbb062" />
@@ -128,6 +133,7 @@ Factorial of 5 is 120
 - Accept an input parameter.
 - Use the `MOD` function to check if the number is divisible by 2.
 - Display whether it is Even or Odd using `DBMS_OUTPUT.PUT_LINE`.
+
 **Query**
 ```
 CREATE OR REPLACE PROCEDURE check_even_odd(n NUMBER)
@@ -141,10 +147,12 @@ BEGIN
 END;
 /
 ```
+
 **Execute**
 ```
 EXEC check_even_odd(12);
 ```
+
 **Expected Output:**  
 12 is Even
 <img width="968" height="367" alt="image" src="https://github.com/user-attachments/assets/ef92111b-c931-435f-9b24-d70277e7075b" />
@@ -179,6 +187,7 @@ BEGIN
 END;
 /
 ```
+
 **Execute**
 ```
 BEGIN
@@ -206,7 +215,21 @@ Reversed number of 1234 is 4321
 **Query**
 ```
 
+CREATE OR REPLACE PROCEDURE print_table(n NUMBER)
+IS
+    i NUMBER := 1;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Multiplication table of ' || n || ':');
 
+    WHILE i <= 10 LOOP
+        DBMS_OUTPUT.PUT_LINE(
+            n || ' x ' || i || ' = ' || (n * i)
+        );
+
+        i := i + 1;
+    END LOOP;
+END;
+/
 ```
 **Execute**
 ```
